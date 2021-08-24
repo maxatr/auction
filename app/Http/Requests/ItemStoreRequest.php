@@ -25,8 +25,8 @@ class ItemStoreRequest extends FormRequest
     {
         return [
             'category_id' => 'required|exists:categories,id',
-            'name' => 'required|max:255|gt:0',
-            'min_price' => 'required|numeric'
+            'name' => 'required|max:255',
+            'min_price' => 'required|numeric|gt:0'
         ];
     }
 }
